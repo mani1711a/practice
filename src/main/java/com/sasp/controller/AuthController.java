@@ -30,7 +30,6 @@ public class AuthController {
 	public ResponseEntity<CommonResponseDto> registerMember(
 	        @ModelAttribute("member") MemberDto memberDto,
 	        @RequestPart("uimg") MultipartFile uimg) {
-
 	    return ResponseEntity.status(HttpStatus.CREATED)
 	            .body(authService.registerMember(memberDto, uimg));
 	}
