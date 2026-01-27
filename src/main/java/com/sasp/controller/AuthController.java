@@ -26,7 +26,7 @@ public class AuthController {
 	private AuthService authService;
 	
 	
-	@PostMapping(path="/register", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE,MediaType.APPLICATION_JSON_VALUE})
+	@PostMapping(path="/register",consumes = {MediaType.MULTIPART_FORM_DATA_VALUE,MediaType.APPLICATION_JSON_VALUE})
 	public ResponseEntity<CommonResponseDto> registerMember(
 	        @ModelAttribute("member") MemberDto memberDto,
 	        @RequestPart("uimg") MultipartFile uimg) {
