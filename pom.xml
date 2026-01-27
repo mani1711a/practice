@@ -15,7 +15,7 @@
 
     <groupId>com.sasp</groupId>
     <artifactId>sasp-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>sasp-demo</name>
     <description>Demo project for sasp</description>
 
