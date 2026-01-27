@@ -1,34 +1,17 @@
 package com.sasp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class LoginDto {
 
-	private int id;
+	private Long id;
 	private String password;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	@Override
-	public String toString() {
-		return "LoginDto [id=" + id + ", password=" + password + "]";
-	}
-	public LoginDto(int id, String password) {
-		super();
-		this.id = id;
-		this.password = password;
-	}
-	public LoginDto() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
 	
 }

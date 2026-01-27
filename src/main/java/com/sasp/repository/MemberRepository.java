@@ -10,9 +10,9 @@ import com.sasp.entity.Member;
 @Repository
 public interface MemberRepository extends JpaRepository<Member,Long>{
 
-	Optional<Member> findById(int id);
+	Optional<Member> findById(Long id);
 
-	boolean existsByMemberId(int memberId);
+	boolean existsById(Long memberId);
 
 
 }

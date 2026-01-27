@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.sasp.cutomexceptions.InvalidPasswordException;
 import com.sasp.cutomexceptions.MemberAlreadyFoundException;
 import com.sasp.cutomexceptions.MemberNotFoundException;
+import com.sasp.cutomexceptions.UnauthorizedException;
 import com.sasp.model.CommonResponseDto;
 
 @RestControllerAdvice
@@ -45,5 +46,10 @@ public class GlobalExceptionHandler{
 				new CommonResponseDto(e.getMessage(),HttpStatus.CONFLICT,LocalDateTime.now()));
 	}
 	
-	
+	@ExceptionHandler(UnauthorizedException.class)
+	public ResponseEntity<CommonResponseDto> UnAuthorizedExceptionHandler(RuntimeException e){
+		return ResponseEntity.status(HttpStatus.CONFLICT).body(
+				new CommonResponseDto(e.getMessage(),HttpStatus.CONFLICT,LocalDateTime.now()));
+				
+	}
 }

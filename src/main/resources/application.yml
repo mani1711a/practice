@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: sasp-auth
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3308/sasp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:1111/
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"  
