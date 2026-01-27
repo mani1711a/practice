@@ -35,7 +35,7 @@ pipeline {
             }
         }
 
-        stage('Start New App') {
+        stage('StartApp') {
             steps {
                 bat '''
                 echo Starting new Spring Boot app
