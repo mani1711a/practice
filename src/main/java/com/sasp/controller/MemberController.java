@@ -14,8 +14,11 @@ import com.sasp.service.MemberService;
 @RequestMapping("v1/member")
 public class MemberController {
 
-	@Autowired
 	private MemberService memberService;
+	
+	MemberController(MemberService memberService){
+		this.memberService =memberService;
+	}
 	
 	@GetMapping()
 	public ResponseEntity<Long> getMember(@PathVariable Long memberId){
