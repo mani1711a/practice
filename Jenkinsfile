@@ -37,7 +37,7 @@ pipeline {
 
         stage('Start App') {
             steps {
-                bat 'java -jar target/sasp-demo-1.jar'
+                bat 'java -jar target/sasp-auth-1.jar'
             }
         }
     }
