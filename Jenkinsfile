@@ -37,10 +37,7 @@ pipeline {
 
         stage('Start App') {
             steps {
-                bat '''
-                echo Starting new Spring Boot app
-                cmd /c start "" java -jar target\\%JAR_NAME%
-                '''
+                bat 'java -jar target/sasp-demo-1.jar'
             }
         }
     }
